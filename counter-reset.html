@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+            width: 600px;
+            counter-reset: my-item;
+        }
+        ul li {
+            width: 200px;
+        float: left;
+            border-bottom: 1px solid ;
+            box-sizing: border-box;
+            height: 100px;
+        }
+        ul li::after {
+            counter-increment: my-item;
+            content: ''counter( my-item);
+            display: block;
+            background: #969696;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+          transform: translateY(50%);
+            line-height: 50px;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+        ul li:nth-child(3n+2) {
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+        ul li:nth-last-child(-n+3) {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>
